@@ -21,16 +21,18 @@ The latest protein-protein interaction chain information can be found in
 
     To replicate the Conda environment used in this project, follow the steps below:
 
+    Run the following code:
+    ```bash
+    conda env create -f environment.yml
+    conda activate PPAP
+
+    ```
     Install PyTorch that matches your CUDA version.
     ```bash
     # CUDA 11.8
     conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 pytorch-cuda=11.8 -c pytorch -c nvidia
     # CUDA 12.1
     conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 pytorch-cuda=12.1 -c pytorch -c nvidia
-    ```
-    Run the following code:
-    ```bash
-    conda env create -f environment.yml
     ```
 
 ## Make predictions
