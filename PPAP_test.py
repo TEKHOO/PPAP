@@ -148,7 +148,7 @@ def delta_G_to_KD_with_units(delta_G, T):
 
 file_path = './graph/whole_edge_feature.hdf5'
 node_path = './graph/esm_feature'
-test_txt = './input/for_test.txt'  # pdbbind90_test or skempi_125+2 or testset
+test_txt = './input/chain_info.txt'  # pdbbind90_test or skempi_125+2 or testset
 test_name = get_names(test_txt=test_txt)
 test_dataset = HDF5Dataset(file_path, node_path, dataset_ids=test_name)
 test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False)
