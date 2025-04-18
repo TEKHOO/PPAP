@@ -14,7 +14,7 @@ The latest protein-protein interaction chain information can be found in
 ## Software Prerequisites
 * [ESM2-3B](https://github.com/facebookresearch/esm) - We use esm2_t36_3B_UR50D to get protein embeddings.
 * [H5py](https://docs.h5py.org/en/stable/quick.html#quick) ≥ 3.11.0
-* [Pytorch](https://pytorch.org/) ≥ 2.3.1
+* [Pytorch](https://pytorch.org/) ≥ 1.12.0
 * [Pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) ≥ 2.1
 * [Torch-geometric](https://github.com/pyg-team/pytorch_geometric) ≥ 2.5.3
 * [Torchmetrics](https://lightning.ai/docs/torchmetrics/stable/) ≥ 0.9.3
@@ -23,17 +23,28 @@ The latest protein-protein interaction chain information can be found in
 
     Run the following code:
     ```bash
+    
     conda env create -f environment.yml
     conda activate PPAP
 
     ```
     Install PyTorch that matches your CUDA version.
     ```bash
-    # CUDA 11.8
-    conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 pytorch-cuda=11.8 -c pytorch -c nvidia
-    # CUDA 12.1
-    conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 pytorch-cuda=12.1 -c pytorch -c nvidia
+    # CUDA 10.2
+    conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=10.2 -c pytorch
+    # CUDA 11.3
+    conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
+    # CUDA 11.6
+    conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.6 -c pytorch -c conda-forge
     ```
+    If your CUDA version is ≥ 12.0, you also need to run:
+    ```bash
+    conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
+    pip install torch==2.3.1
+
+    ```
+    If none of the above installation methods work, you can download our pre-configured environment ​​PPAP.tar.gz​​ from [huggingface](https://huggingface.co/qj666/PPAP/tree/main), then move it to your Conda environments directory.
+    
 
 ## Make predictions
 1. **Download Model Weights**  
