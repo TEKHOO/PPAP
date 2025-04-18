@@ -1,4 +1,4 @@
-from strips.PPAP import *
+from scripts.PPAP import *
 import h5py
 import numpy as np
 import torch
