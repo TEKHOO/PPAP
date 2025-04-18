@@ -39,7 +39,7 @@ The latest protein-protein interaction chain information can be found in
     ```
     If your CUDA version is ≥ 12.0, you also need to run:
     ```bash
-    conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
+    conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.6 -c pytorch -c conda-forge
     pip install torch==2.3.1
 
     ```
