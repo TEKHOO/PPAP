@@ -5,13 +5,16 @@ channels:
   - defaults
 dependencies:
   - python=3.10
-  - pytorch=2.3.1
   - pytorch-lightning=2.1.4
   - torchmetrics=0.9.3
   - h5py>=3.11.0
+  - numpy=1.26.3
+  - pandas=2.2.0
   - pip
   - pip:
       - fair-esm==2.0.0
       - torch-scatter==2.1.2
       - torch-geometric==2.5.3
       - biopython==1.83
+      - einops>=0.7.0
+      - openpyxl==3.1.2
