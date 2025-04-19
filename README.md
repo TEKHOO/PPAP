@@ -81,7 +81,7 @@ The latest protein-protein interaction chain information can be found in
     Run `cal_graph.py`:
     
     ```bash
-    cd PPAP/strips/
+    cd PPAP/scripts/
     python cal_graph.py
     ```
 
